@@ -1,22 +1,53 @@
-<h1>{{ todoListTitle }}</h1>
+  <div id="masthead">
+      <img class="logo" src="https://www.mysmartgroup.co.uk/wp-content/uploads/2017/12/1-2-dell-logo-3d-white-png.png"
+      (click)="showVisible()"/>
 
-<div *ngIf="todosTasks.length !== 0">
-  <ul>
-    <li
-      *ngFor="let task of todosTasks"
-      [class.completed]="todos[task]"
-      (click)="onClickTask(task)"
-    >
-      {{ task }}
-    </li>
-  </ul>
-</div>
+      <div class="mastheadlink">
+          <ul>
+              <li (click)="showCartPage()">My Cart</li>
+          </ul>
+      </div>
+    </div>
 
-<div *ngIf="todosTasks.length === 0">
-  <h3>No tasks found</h3>
-</div>
+    
+    <div id="allProduct-page" *ngIf='IsVisible===true'>        
+      <h1>Shopping Cart</h1>
+      <div >
+          <div id="productBox" *ngFor="let product of ShowProducts; let i = index" [style.background-color]="showSelected(i)">
+          <div>
+            <img class="laptopimage" src="{{product.image}}" />
+          </div>
+          <div>
+          <div class="priceDisplay" > ${{ product.price }} </div>
+          <div class="cartIncrDecr">
+              <button (click)="MinusQuantity(i)" >-</button>  
+              <div class="qtyDisplay">{{itemQty[i]}}</div>
+              <button (click)="AddQuantity(i)" >+</button>  
+          </div>
+          <div class="selectButton">
+              <button (click)="selectedValue(i)" >Select</button> 
+          </div>
+          <p>{{ product.description }}</p>
+          
+          </div>
+      </div>
+      </div>
+      <div id="cart-page" *ngIf='IsVisible===true'>  
 
-<div>{{ numCompleted }} tasks have been completed</div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="cartlink">
+            <ul>
+                <li ><button (click)="addToCart()" >Add to Cart</button> </li>
+                <li ><button (click)="removeCart()" >Clear Selection</button> </li>
+            </ul>
+        </div>
+      </div>     
 
-<button (click)="onClearList()">Clear List</button>
-<button (click)="onAddTask()">Add Task</button>
+     
+
+
+
+
+

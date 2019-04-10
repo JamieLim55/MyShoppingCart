@@ -1,8 +1,98 @@
-li {
-    color: red;
+#masthead{
+  position: fixed;
+  width: 100%;
+  top: 5px;
+  background-color: #0087c7;
+  margin: -8px;
+}
+
+.logo{
+  display: inline-block;
+   height:80px;
+}
+
+.mastheadlink{
+  display: inline-flex;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 650px;
+ }
+
+ li{
+  display: inline-flex;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    padding: 0px 20px 0px;
   }
-  
-  .completed {
-    color: green;
+.hidden {
+    display: none;
   }
-  
+
+#cart-page {
+    padding-top: 15vh;
+ }
+
+#allProduct-page {
+  padding-top: 15vh;
+  }
+
+.container {
+    /* margin-left: 20vw;
+    margin-right: 20vw; */
+    max-width: 60vw;
+    margin: auto;
+  }
+
+h1{
+   font-size: 36px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  margin-left: 100px;
+  }
+
+#productBox{
+  display: flex;
+  max-width: 600px;
+  margin-top: 50px;
+  margin-left: 150px;
+  box-shadow: 0px 1px 5px #888888;
+  }
+
+.laptopimage{
+  height:150px;
+  width:170px;
+}
+.priceDisplay{
+  display: inline-flex;
+  margin-top: 10px;
+}
+.cartIncrDecr{
+  display: inline-flex;
+  margin-left: 200px;
+}
+.qtyDisplay{
+  display: inline-flex;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.selectButton{
+  display: inline-flex;
+  margin-left: 50px;
+}
+
+#footer{
+position: fixed;
+width: 100%;
+bottom: 5px;
+background-color: #0087c7;
+margin: -8px;
+}
+
+.cartlink{
+  display: inline-flex;
+    margin-top: 20px;
+    margin-left: 650px;
+
+}
+
